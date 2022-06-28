@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Qt笔记</title>
+    <url>/archives/342954a4.html</url>
+    <content><![CDATA[<p>我开始接触Qt不久，后面我会把自己的一些学习经验分享出来，大家一起共同进步。</p>
+<span id="more"></span>
+
+<h2 id="一-第一个程序"><a href="#一-第一个程序" class="headerlink" title="一.第一个程序"></a>一.第一个程序</h2><h3 id="1-窗口类型：QWidget、QMainWindow、QDialog"><a href="#1-窗口类型：QWidget、QMainWindow、QDialog" class="headerlink" title="(1)窗口类型：QWidget、QMainWindow、QDialog"></a>(1)窗口类型：QWidget、QMainWindow、QDialog</h3><h3 id="2-main函数"><a href="#2-main函数" class="headerlink" title="(2)main函数"></a>(2)main函数</h3><ul>
+<li>QApplication a 应用程序对象只能有一个</li>
+<li>myWidget w 自定义实例化窗口对象</li>
+<li>w.show() 窗口显示</li>
+<li>return a.exec() 让应用程序对象进入消息循环机制中，代码阻塞到当前行</li>
+</ul>
+<h3 id="3-窗口设置"><a href="#3-窗口设置" class="headerlink" title="(3)窗口设置"></a>(3)窗口设置</h3><ul>
+<li>设置标题：setWindowTitle(“标题”)；</li>
+<li>重新指定窗口的大小：resize(w,h)；</li>
+<li>设置窗口的固定大小：setFixedSize(w,h)；</li>
+</ul>
+<h2 id="二、按钮、其常用接口-API"><a href="#二、按钮、其常用接口-API" class="headerlink" title="二、按钮、其常用接口(API)"></a>二、按钮、其常用接口(API)</h2><ul>
+<li>创建一个按钮对象：QPushButton *button &#x3D; new QPushButton</li>
+<li>设置窗口在父类中显示：setParent(this);</li>
+<li>设置文本: setText(“按钮”);</li>
+<li>设置按钮位置：move(x,y)；</li>
+<li>重新指定按钮的大小：button-&gt;resize(w,h)；</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>微信小程序</title>
     <url>/archives/undefined.html</url>
     <content><![CDATA[<p> 随着经济、网络的快速发展,我们的生活质量也在不断提高。为了更好的服务体验，微信小程序的诞生了。微信小程序可以给我们的生活提供轻快便捷的服务。如购物、定餐，以及各种服务。就像看电影不用排队，简单的扫码就能完成购票。既然微信小程序这么流行，我们可不可以做一个呢？答案是肯定的，接下来就由我带你做一个简单的微信小程序吧。</p>
-<h2 id="一、获取属于自己的微信小程序"><a href="#一、获取属于自己的微信小程序" class="headerlink" title="一、获取属于自己的微信小程序"></a>一、获取属于自己的微信小程序</h2><h2 id="二、搭建微信小程序的开发环境"><a href="#二、搭建微信小程序的开发环境" class="headerlink" title="二、搭建微信小程序的开发环境"></a>二、搭建微信小程序的开发环境</h2><h2 id="三、设置IDE的设置"><a href="#三、设置IDE的设置" class="headerlink" title="三、设置IDE的设置"></a>三、设置IDE的设置</h2>]]></content>
+<h2 id="一、获取属于自己的微信小程序"><a href="#一、获取属于自己的微信小程序" class="headerlink" title="一、获取属于自己的微信小程序"></a>一、获取属于自己的微信小程序</h2><h2 id="二、搭建微信小程序的开发环境"><a href="#二、搭建微信小程序的开发环境" class="headerlink" title="二、搭建微信小程序的开发环境"></a>二、搭建微信小程序的开发环境</h2><h2 id="三、IDE配置"><a href="#三、IDE配置" class="headerlink" title="三、IDE配置"></a>三、IDE配置</h2>]]></content>
   </entry>
   <entry>
     <title>关于Markdown的语法</title>
@@ -80,32 +106,6 @@
 <td align="right">内容</td>
 </tr>
 </tbody></table>
-]]></content>
-  </entry>
-  <entry>
-    <title>Qt笔记</title>
-    <url>/archives/342954a4.html</url>
-    <content><![CDATA[<p>我开始接触Qt不久，后面我会把自己的一些学习经验分享出来，大家一起共同进步。</p>
-<span id="more"></span>
-
-<h2 id="一-第一个程序"><a href="#一-第一个程序" class="headerlink" title="一.第一个程序"></a>一.第一个程序</h2><h3 id="1-窗口类型：QWidget、QMainWindow、QDialog"><a href="#1-窗口类型：QWidget、QMainWindow、QDialog" class="headerlink" title="(1)窗口类型：QWidget、QMainWindow、QDialog"></a>(1)窗口类型：QWidget、QMainWindow、QDialog</h3><h3 id="2-main函数"><a href="#2-main函数" class="headerlink" title="(2)main函数"></a>(2)main函数</h3><ul>
-<li>QApplication a 应用程序对象只能有一个</li>
-<li>myWidget w 自定义实例化窗口对象</li>
-<li>w.show() 窗口显示</li>
-<li>return a.exec() 让应用程序对象进入消息循环机制中，代码阻塞到当前行</li>
-</ul>
-<h3 id="3-窗口设置"><a href="#3-窗口设置" class="headerlink" title="(3)窗口设置"></a>(3)窗口设置</h3><ul>
-<li>设置标题：setWindowTitle(“标题”)；</li>
-<li>重新指定窗口的大小：resize(w,h)；</li>
-<li>设置窗口的固定大小：setFixedSize(w,h)；</li>
-</ul>
-<h2 id="二、按钮、其常用接口-API"><a href="#二、按钮、其常用接口-API" class="headerlink" title="二、按钮、其常用接口(API)"></a>二、按钮、其常用接口(API)</h2><ul>
-<li>创建一个按钮对象：QPushButton *button &#x3D; new QPushButton</li>
-<li>设置窗口在父类中显示：setParent(this);</li>
-<li>设置文本: setText(“按钮”);</li>
-<li>设置按钮位置：move(x,y)；</li>
-<li>重新指定按钮的大小：button-&gt;resize(w,h)；</li>
-</ul>
 ]]></content>
   </entry>
 </search>
