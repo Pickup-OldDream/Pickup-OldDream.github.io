@@ -7,9 +7,9 @@
 <h2 id="一、获取属于自己的微信小程序"><a href="#一、获取属于自己的微信小程序" class="headerlink" title="一、获取属于自己的微信小程序"></a>一、获取属于自己的微信小程序</h2><h2 id="二、搭建微信小程序的开发环境"><a href="#二、搭建微信小程序的开发环境" class="headerlink" title="二、搭建微信小程序的开发环境"></a>二、搭建微信小程序的开发环境</h2><h2 id="三、IDE配置"><a href="#三、IDE配置" class="headerlink" title="三、IDE配置"></a>三、IDE配置</h2>]]></content>
   </entry>
   <entry>
-    <title></title>
+    <title>如何使用openocd烧录程序</title>
     <url>/archives/undefined.html</url>
-    <content><![CDATA[<h1 id="openocd"><a href="#openocd" class="headerlink" title="openocd"></a>openocd</h1><h2 id="一、openocd介绍"><a href="#一、openocd介绍" class="headerlink" title="一、openocd介绍"></a>一、openocd介绍</h2><p>OpenOCD（Open On-Chip Debugger）是一个开源的片上调试器，旨在提供针对嵌入式设备的调试、系统编程和边界扫描功能。OpenOCD的功能需要调试仿真器来辅助完成，调试仿真器是一个提供调试目标电信号的小型硬件单元。常用的有JLink、STLink等，一些开发板直接集成了调试仿真器，如小熊派开发板就集成了STLink。</p>
+    <content><![CDATA[<h2 id="一、openocd介绍"><a href="#一、openocd介绍" class="headerlink" title="一、openocd介绍"></a>一、openocd介绍</h2><p>OpenOCD（Open On-Chip Debugger）是一个开源的片上调试器，旨在提供针对嵌入式设备的调试、系统编程和边界扫描功能。OpenOCD的功能需要调试仿真器来辅助完成，调试仿真器是一个提供调试目标电信号的小型硬件单元。常用的有JLink、STLink等，一些开发板直接集成了调试仿真器，如小熊派开发板就集成了STLink。</p>
 <h2 id="二、openocd下载"><a href="#二、openocd下载" class="headerlink" title="二、openocd下载"></a>二、openocd下载</h2><p><a href="https://gnutoolchains.com/arm-eabi/openocd/">下载地址</a></p>
 <h2 id="三、配置环境变量"><a href="#三、配置环境变量" class="headerlink" title="三、配置环境变量"></a>三、配置环境变量</h2><p>打开面板搜索环境变量<br><img src="/../../public/images/openocd-img1.png" alt="环境变量"><br><img src="/../../public/images/selfnew.png" alt="环境变量"><br><img src="/../../public/images/new.png" alt="环境变量"></p>
 <h2 id="四、openocd的使用"><a href="#四、openocd的使用" class="headerlink" title="四、openocd的使用"></a>四、openocd的使用</h2><h3 id="1、在终端中使用j-link下载可仿照如下命令"><a href="#1、在终端中使用j-link下载可仿照如下命令" class="headerlink" title="1、在终端中使用j-link下载可仿照如下命令"></a>1、在终端中使用j-link下载可仿照如下命令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openocd -f D:/openocd/share/openocd/scripts/interface/jlink.cfg -c &#x27;transport select swd&#x27; -f D:/openocd/share/openocd/scripts/target/stm32f1x.cfg -c &#x27;program build/LED.elf verify reset exit&#x27;</span><br></pre></td></tr></table></figure>
