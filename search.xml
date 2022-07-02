@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用Makefile搭建stm32f103 重定向串口printf</title>
+    <url>/archives/undefined.html</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="一、串口重定向"><a href="#一、串口重定向" class="headerlink" title="一、串口重定向"></a>一、串口重定向</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"></span><br><span class="line">int _write(int fd, char *ch, int len)//可在main.c或者uart.c</span><br><span class="line">&#123;</span><br><span class="line">  HAL_UART_Transmit(&amp;huart1, (uint8_t*)ch, len, 0xFFFF);</span><br><span class="line">  <span class="built_in">return</span> len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、解决打印浮点数问题"><a href="#二、解决打印浮点数问题" class="headerlink" title="二、解决打印浮点数问题"></a>二、解决打印浮点数问题</h2><p>在Makefile中找到如下位置进行修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">- ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections</span><br><span class="line"></span><br><span class="line">+ ASFLAGS = $(MCU) -u_printf_float -u_sprintf_float $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、解决打印出现中文乱码问题"><a href="#三、解决打印出现中文乱码问题" class="headerlink" title="三、解决打印出现中文乱码问题"></a>三、解决打印出现中文乱码问题</h2><p>修改编码格式即可，我的改成GB 2312解决了乱码问题</p>
+]]></content>
+      <tags>
+        <tag>Makefile</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序</title>
     <url>/archives/undefined.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">

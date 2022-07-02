@@ -78,4 +78,29 @@
     
   </entry>
   
+  <entry>
+    <title>使用Makefile搭建stm32f103 重定向串口printf</title>
+    <link href="https://tding.top/archives/undefined.html"/>
+    <id>https://tding.top/archives/undefined.html</id>
+    <published>2018-11-23T13:20:03.000Z</published>
+    <updated>2022-07-02T13:41:22.120Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;一、串口重定向&quot;&gt;&lt;a href=&quot;#一、串口重定向&quot; class=&quot;headerlink&quot; title=&quot;一、串口重定向&quot;&gt;&lt;/a&gt;一、串口重定向&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Makefile" scheme="https://tding.top/tags/Makefile/"/>
+    
+  </entry>
+  
 </feed>
