@@ -47,20 +47,14 @@
   </entry>
   
   <entry>
-    <title>微信小程序</title>
+    <title>如何使用openocd烧录程序</title>
     <link href="https://tding.top/archives/undefined.html"/>
     <id>https://tding.top/archives/undefined.html</id>
     <published>2018-11-23T13:20:03.000Z</published>
-    <updated>2022-06-30T01:56:17.138Z</updated>
+    <updated>2022-07-02T12:20:13.515Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;一、openocd介绍&quot;&gt;&lt;a href=&quot;#一、openocd介绍&quot; class=&quot;headerlink&quot; title=&quot;一、openocd介绍&quot;&gt;&lt;/a&gt;一、openocd介绍&lt;/h2&gt;&lt;p&gt;OpenOCD（Open On-Chip Debugger）是一个开源的片上调试器，旨在提供针对嵌入式设备的调试、系统编程和边界扫描功能。OpenOCD的功能需要调试仿真器来辅助完成，调试仿真器是一个提供调试目标电信号的小型硬件单元。常用的有JLink、STLink等，一些开发板直接集成了调试仿真器，如小熊派开发板就集成了STLink。&lt;/p&gt;</summary>
     
     
     
@@ -68,23 +62,19 @@
   </entry>
   
   <entry>
-    <title>如何使用openocd烧录程序</title>
+    <title>微信小程序</title>
     <link href="https://tding.top/archives/undefined.html"/>
     <id>https://tding.top/archives/undefined.html</id>
     <published>2018-11-23T13:20:03.000Z</published>
-    <updated>2022-07-02T01:28:56.630Z</updated>
+    <updated>2022-07-02T12:11:43.004Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、openocd介绍&quot;&gt;&lt;a href=&quot;#一、openocd介绍&quot; class=&quot;headerlink&quot; title=&quot;一、openocd介绍&quot;&gt;&lt;/a&gt;一、openocd介绍&lt;/h2&gt;&lt;p&gt;OpenOCD（Open On-Chip</summary>
-        
-      
+    <summary type="html">文章已被加密，可输入密码查看。</summary>
     
     
     
+    
+    <category term="java" scheme="https://tding.top/tags/java/"/>
     
   </entry>
   
