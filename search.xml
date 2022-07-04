@@ -20,20 +20,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Makefile构建stm32重定向串口printf</title>
-    <url>/archives/10002.html</url>
-    <content><![CDATA[<span id="more"></span>
+    <title>Qt笔记</title>
+    <url>/archives/342954a4.html</url>
+    <content><![CDATA[<p>我开始接触Qt不久，后面我会把自己的一些学习经验分享出来，大家一起共同进步。</p>
+<span id="more"></span>
 
-<h2 id="一、串口重定向"><a href="#一、串口重定向" class="headerlink" title="一、串口重定向"></a>一、串口重定向</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"></span><br><span class="line">int _write(int fd, char *ch, int len)//可在main.c或者uart.c</span><br><span class="line">&#123;</span><br><span class="line">  HAL_UART_Transmit(&amp;huart1, (uint8_t*)ch, len, 0xFFFF);</span><br><span class="line">  <span class="built_in">return</span> len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、解决打印浮点数问题"><a href="#二、解决打印浮点数问题" class="headerlink" title="二、解决打印浮点数问题"></a>二、解决打印浮点数问题</h2><p>在Makefile中找到如下位置进行修改</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">- LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections</span><br><span class="line">+ LDFLAGS = $(MCU) -u _printf_float -u _scanf_float -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、解决打印出现中文乱码问题"><a href="#三、解决打印出现中文乱码问题" class="headerlink" title="三、解决打印出现中文乱码问题"></a>三、解决打印出现中文乱码问题</h2><p>修改编码格式即可，我的改成GB 2312解决了乱码问题,或者使用支持UT-8的编码(推荐使用后者)</p>
+<h2 id="一-第一个程序"><a href="#一-第一个程序" class="headerlink" title="一.第一个程序"></a>一.第一个程序</h2><h3 id="1-窗口类型：QWidget、QMainWindow、QDialog"><a href="#1-窗口类型：QWidget、QMainWindow、QDialog" class="headerlink" title="(1)窗口类型：QWidget、QMainWindow、QDialog"></a>(1)窗口类型：QWidget、QMainWindow、QDialog</h3><h3 id="2-main函数"><a href="#2-main函数" class="headerlink" title="(2)main函数"></a>(2)main函数</h3><ul>
+<li>QApplication a 应用程序对象只能有一个</li>
+<li>myWidget w 自定义实例化窗口对象</li>
+<li>w.show() 窗口显示</li>
+<li>return a.exec() 让应用程序对象进入消息循环机制中，代码阻塞到当前行</li>
+</ul>
+<h3 id="3-窗口设置"><a href="#3-窗口设置" class="headerlink" title="(3)窗口设置"></a>(3)窗口设置</h3><ul>
+<li>设置标题：setWindowTitle(“标题”)；</li>
+<li>重新指定窗口的大小：resize(w,h)；</li>
+<li>设置窗口的固定大小：setFixedSize(w,h)；</li>
+</ul>
+<h2 id="二、按钮、其常用接口-API"><a href="#二、按钮、其常用接口-API" class="headerlink" title="二、按钮、其常用接口(API)"></a>二、按钮、其常用接口(API)</h2><ul>
+<li>创建一个按钮对象：QPushButton *button &#x3D; new QPushButton</li>
+<li>设置窗口在父类中显示：setParent(this);</li>
+<li>设置文本: setText(“按钮”);</li>
+<li>设置按钮位置：move(x,y)；</li>
+<li>重新指定按钮的大小：button-&gt;resize(w,h)；</li>
+</ul>
 ]]></content>
-      <tags>
-        <tag>Makefile</tag>
-      </tags>
   </entry>
   <entry>
     <title>如何使用openocd烧录程序</title>
@@ -42,11 +52,11 @@
 <span id="more"></span>
 
 <h2 id="二、openocd下载"><a href="#二、openocd下载" class="headerlink" title="二、openocd下载"></a>二、openocd下载</h2><p><a href="https://gnutoolchains.com/arm-eabi/openocd/">下载地址</a></p>
-<h2 id="三、配置环境变量"><a href="#三、配置环境变量" class="headerlink" title="三、配置环境变量"></a>三、配置环境变量</h2><p>打开面板搜索环境变量<br><img src="/images/openocd-img1.png" alt="环境变量"><br><img src="/images/selfnew.png" alt="环境变量"><br><img src="/images/new.png" alt="环境变量"></p>
+<h2 id="三、配置环境变量"><a href="#三、配置环境变量" class="headerlink" title="三、配置环境变量"></a>三、配置环境变量</h2><p>打开面板搜索环境变量<br><img src="/photos/openocd-img1.png" alt="环境变量"><br><img src="/photos/selfnew.png" alt="环境变量"><br><img src="/photos/new.png" alt="环境变量"></p>
 <h2 id="四、openocd的使用"><a href="#四、openocd的使用" class="headerlink" title="四、openocd的使用"></a>四、openocd的使用</h2><h3 id="1、使用j-link下载在终端中可仿照如下命令"><a href="#1、使用j-link下载在终端中可仿照如下命令" class="headerlink" title="1、使用j-link下载在终端中可仿照如下命令"></a>1、使用j-link下载在终端中可仿照如下命令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openocd -f D:/openocd/share/openocd/scripts/interface/jlink.cfg -c &#x27;transport select swd&#x27; -f D:/openocd/share/openocd/scripts/target/stm32f1x.cfg -c &#x27;program build/LED.elf verify reset exit&#x27;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/openocd-cmd.png" alt="环境变量"></p>
-<p>其中<strong>D:&#x2F;openocd&#x2F;share&#x2F;openocd&#x2F;scripts&#x2F;interface&#x2F;jlink.cfg</strong> 是安装openocd路径下j-link的配置文件；<br><img src="/images/j-link-cfig.png" alt="环境变量"><br><strong>D:&#x2F;openocd&#x2F;share&#x2F;openocd&#x2F;scripts&#x2F;target&#x2F;stm32f1x.cfg</strong><br>则是下载到开板上对应芯片型号的配置文件；<br><img src="/images/stm32f1-cfig.png" alt="环境变量"><br>在“<strong>program build&#x2F;LED.elf verify reset exit</strong>”中，build&#x2F;LED.elf为当前终端路径下，自己编译器生成的文件也可换成XXX.hex或者XXX.bin文件。<br>“<strong>transport select swd</strong>“选择的传输协议为：swd</p>
+<p><img src="/photos/openocd-cmd.png" alt="环境变量"></p>
+<p>其中<strong>D:&#x2F;openocd&#x2F;share&#x2F;openocd&#x2F;scripts&#x2F;interface&#x2F;jlink.cfg</strong> 是安装openocd路径下j-link的配置文件；<br><img src="/photos/j-link-cfig.png" alt="环境变量"><br><strong>D:&#x2F;openocd&#x2F;share&#x2F;openocd&#x2F;scripts&#x2F;target&#x2F;stm32f1x.cfg</strong><br>则是下载到开板上对应芯片型号的配置文件；<br><img src="/photos/stm32f1-cfig.png" alt="环境变量"><br>在“<strong>program build&#x2F;LED.elf verify reset exit</strong>”中，build&#x2F;LED.elf为当前终端路径下，自己编译器生成的文件也可换成XXX.hex或者XXX.bin文件。<br>“<strong>transport select swd</strong>“选择的传输协议为：swd</p>
 <p>使用其他下载器或者芯片可按照以上方法配置。</p>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>在vscode可通过tasks.json配置任务使用</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;shell&quot;</span>,</span><br><span class="line">    <span class="string">&quot;label&quot;</span>: <span class="string">&quot;Download&quot;</span>,</span><br><span class="line">    <span class="string">&quot;command&quot;</span>:<span class="string">&quot;openocd&quot;</span>,</span><br><span class="line">    <span class="string">&quot;args&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">    <span class="string">&quot;D:/openocd/share/openocd/scripts/interface/jlink.cfg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;-c&quot;</span>,</span><br><span class="line">    <span class="string">&quot;transport select swd&quot;</span>,</span><br><span class="line">    <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">    <span class="string">&quot;D:/openocd/share/openocd/scripts/target/stm32f1x.cfg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;-c&quot;</span>,</span><br><span class="line">    <span class="string">&quot;program build/LED.elf verify reset exit&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;<span class="variable">$gcc</span>&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;group&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dependsOn&quot;</span>: <span class="string">&quot;Build&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -130,29 +140,19 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Qt笔记</title>
-    <url>/archives/342954a4.html</url>
-    <content><![CDATA[<p>我开始接触Qt不久，后面我会把自己的一些学习经验分享出来，大家一起共同进步。</p>
-<span id="more"></span>
+    <title>Makefile构建stm32重定向串口printf</title>
+    <url>/archives/10002.html</url>
+    <content><![CDATA[<span id="more"></span>
 
-<h2 id="一-第一个程序"><a href="#一-第一个程序" class="headerlink" title="一.第一个程序"></a>一.第一个程序</h2><h3 id="1-窗口类型：QWidget、QMainWindow、QDialog"><a href="#1-窗口类型：QWidget、QMainWindow、QDialog" class="headerlink" title="(1)窗口类型：QWidget、QMainWindow、QDialog"></a>(1)窗口类型：QWidget、QMainWindow、QDialog</h3><h3 id="2-main函数"><a href="#2-main函数" class="headerlink" title="(2)main函数"></a>(2)main函数</h3><ul>
-<li>QApplication a 应用程序对象只能有一个</li>
-<li>myWidget w 自定义实例化窗口对象</li>
-<li>w.show() 窗口显示</li>
-<li>return a.exec() 让应用程序对象进入消息循环机制中，代码阻塞到当前行</li>
-</ul>
-<h3 id="3-窗口设置"><a href="#3-窗口设置" class="headerlink" title="(3)窗口设置"></a>(3)窗口设置</h3><ul>
-<li>设置标题：setWindowTitle(“标题”)；</li>
-<li>重新指定窗口的大小：resize(w,h)；</li>
-<li>设置窗口的固定大小：setFixedSize(w,h)；</li>
-</ul>
-<h2 id="二、按钮、其常用接口-API"><a href="#二、按钮、其常用接口-API" class="headerlink" title="二、按钮、其常用接口(API)"></a>二、按钮、其常用接口(API)</h2><ul>
-<li>创建一个按钮对象：QPushButton *button &#x3D; new QPushButton</li>
-<li>设置窗口在父类中显示：setParent(this);</li>
-<li>设置文本: setText(“按钮”);</li>
-<li>设置按钮位置：move(x,y)；</li>
-<li>重新指定按钮的大小：button-&gt;resize(w,h)；</li>
-</ul>
+<h2 id="一、串口重定向"><a href="#一、串口重定向" class="headerlink" title="一、串口重定向"></a>一、串口重定向</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"></span><br><span class="line">int _write(int fd, char *ch, int len)//可在main.c或者uart.c</span><br><span class="line">&#123;</span><br><span class="line">  HAL_UART_Transmit(&amp;huart1, (uint8_t*)ch, len, 0xFFFF);</span><br><span class="line">  <span class="built_in">return</span> len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、解决打印浮点数问题"><a href="#二、解决打印浮点数问题" class="headerlink" title="二、解决打印浮点数问题"></a>二、解决打印浮点数问题</h2><p>在Makefile中找到如下位置进行修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">- LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections</span><br><span class="line">+ LDFLAGS = $(MCU) -u _printf_float -u _scanf_float -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、解决打印出现中文乱码问题"><a href="#三、解决打印出现中文乱码问题" class="headerlink" title="三、解决打印出现中文乱码问题"></a>三、解决打印出现中文乱码问题</h2><p>修改编码格式即可，我的改成GB 2312解决了乱码问题,或者使用支持UT-8的编码(推荐使用后者)</p>
 ]]></content>
+      <tags>
+        <tag>Makefile</tag>
+      </tags>
   </entry>
 </search>

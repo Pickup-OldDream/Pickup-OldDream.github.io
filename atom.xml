@@ -46,7 +46,7 @@
     <link href="https://tding.top/archives/342954a3.html"/>
     <id>https://tding.top/archives/342954a3.html</id>
     <published>2022-07-01T11:50:48.830Z</published>
-    <updated>2022-07-04T12:23:27.896Z</updated>
+    <updated>2022-07-04T12:36:34.889Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;一、openocd介绍&quot;&gt;&lt;a href=&quot;#一、openocd介绍&quot; class=&quot;headerlink&quot; title=&quot;一、openocd介绍&quot;&gt;&lt;/a&gt;一、openocd介绍&lt;/h2&gt;&lt;p&gt;OpenOCD（Open On-Chip Debugger）是一个开源的片上调试器，旨在提供针对嵌入式设备的调试、系统编程和边界扫描功能。OpenOCD的功能需要调试仿真器来辅助完成，调试仿真器是一个提供调试目标电信号的小型硬件单元。常用的有JLink、STLink等，一些开发板直接集成了调试仿真器，如小熊派开发板就集成了STLink。&lt;/p&gt;</summary>
