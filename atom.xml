@@ -6,7 +6,7 @@
   <link href="https://tding.top/atom.xml" rel="self"/>
   
   <link href="https://tding.top/"/>
-  <updated>2022-07-04T12:25:38.180Z</updated>
+  <updated>2022-07-04T14:16:05.652Z</updated>
   <id>https://tding.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tding.top/archives/10002.html"/>
     <id>https://tding.top/archives/10002.html</id>
     <published>2022-07-02T12:54:54.026Z</published>
-    <updated>2022-07-04T12:25:38.180Z</updated>
+    <updated>2022-07-04T14:16:05.652Z</updated>
     
     
       
@@ -57,11 +57,56 @@
   </entry>
   
   <entry>
+    <title>11、Qt程序打包</title>
+    <link href="https://tding.top/archives/6271061.html"/>
+    <id>https://tding.top/archives/6271061.html</id>
+    <published>2022-06-27T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:43.708Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Qt的应用程序编译出来之后,将单独的exe程序拿到其他PC上运行是运行不起来的,会提示缺少对应的动态链接库。我们需要去Qt的安装目录下找到所有的Qt程序运行时所依赖的，将他们和exe程序放到同一目录下，程序才可以执行。根据上边的描述我们可以想象的到，如果手动去寻找应用程序依赖的动态库，这是一件非常麻烦的事情。其实我们完全没有必要这么辛苦，Qt给我们提供了一个寻找依赖项的工具windeployqt&lt;/p&gt;
+&lt;p&gt;Windeployqt的使用方法：&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Qt5学习笔记汇总</title>
+    <link href="https://tding.top/archives/6271731.html"/>
+    <id>https://tding.top/archives/6271731.html</id>
+    <published>2022-06-27T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:56.486Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1、Qt概述&quot;&gt;&lt;a href=&quot;#1、Qt概述&quot; class=&quot;headerlink&quot; title=&quot;1、Qt概述&quot;&gt;&lt;/a&gt;1、Qt概述&lt;/h2&gt;&lt;h3 id=&quot;1-1-什么是Qt&quot;&gt;&lt;a href=&quot;#1-1-什么是Qt&quot; class=&quot;headerlink&quot; title=&quot;1.1 什么是Qt&quot;&gt;&lt;/a&gt;1.1 什么是Qt&lt;/h3&gt;&lt;p&gt;Qt是一个&lt;strong&gt;跨平台&lt;/strong&gt;的C++&lt;strong&gt;图形用户界面应用程序框架&lt;/strong&gt;。它为应用程序开发者提供建立艺术级图形界面所需的所有功能。它是完全面向对象的，很容易扩展，并且允许真正的组件编程。&lt;/p&gt;
+&lt;h3 id=&quot;1-2-Qt的发展史&quot;&gt;&lt;a href=&quot;#1-2-Qt的发展史&quot; class=&quot;headerlink&quot; title=&quot;1.2 Qt的发展史&quot;&gt;&lt;/a&gt;1.2 Qt的发展史&lt;/h3&gt;&lt;p&gt;1991年 Qt最早由奇趣科技开发&lt;/p&gt;
+&lt;p&gt;1996年 进入商业领域，它也是目前流行的Linux桌面环境KDE的基础&lt;/p&gt;
+&lt;p&gt;2008年 奇趣科技被诺基亚公司收购，Qt称为诺基亚旗下的编程语言&lt;/p&gt;
+&lt;p&gt;2012年 Qt又被Digia公司收购&lt;/p&gt;
+&lt;p&gt;2014年4月 跨平台的集成开发环境Qt Creator3.1.0发布，同年5月20日配发了Qt5.3正式版，至此Qt实现了对iOS、Android、WP等各平台的全面支持。&lt;/p&gt;
+&lt;p&gt;当前Qt最新版本为 5.5.0&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于Markdown的语法</title>
     <link href="https://tding.top/archives/ebd52ec9.html"/>
     <id>https://tding.top/archives/ebd52ec9.html</id>
     <published>2022-06-26T09:24:22.608Z</published>
-    <updated>2022-07-01T12:03:31.335Z</updated>
+    <updated>2022-07-08T10:40:12.872Z</updated>
     
     
     <summary type="html">&lt;p&gt;以下是Markdwm的一些常用到的基本语法&lt;/p&gt;</summary>
@@ -72,17 +117,196 @@
   </entry>
   
   <entry>
-    <title>Qt笔记</title>
-    <link href="https://tding.top/archives/342954a4.html"/>
-    <id>https://tding.top/archives/342954a4.html</id>
-    <published>2022-06-26T09:24:22.592Z</published>
-    <updated>2022-06-25T09:20:41.112Z</updated>
+    <title>10、数库操作</title>
+    <link href="https://tding.top/archives/6251621.html"/>
+    <id>https://tding.top/archives/6251621.html</id>
+    <published>2022-06-25T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:38.038Z</updated>
     
     
-    <summary type="html">&lt;p&gt;我开始接触Qt不久，后面我会把自己的一些学习经验分享出来，大家一起共同进步。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;10-1-数据库操作&quot;&gt;&lt;a href=&quot;#10-1-数据库操作&quot; class=&quot;headerlink&quot; title=&quot;10.1 数据库操作&quot;&gt;&lt;/a&gt;10.1 数据库操作&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Qt&lt;/strong&gt; &lt;strong&gt;提供了 QtSq- 模块来提供平台独立的基于 SQ- 的数据库操作。&lt;/strong&gt;这里我们所说的“平台独立”，既包括操作系统平台，有包括各个数据库平台。另外，我们强调了“基于 SQL”，因为 NoSQ- 数据库至今没有一个通用查询方法，所以不可能提供一种通用的 NoSQ- 数据库的操作。&lt;strong&gt;Qt 的数据库操作还可以很方便的与 model&amp;#x2F;view 架构进行整合。&lt;/strong&gt;通常来说，我们对数据库的操作更多地在于对数据库表的操作，而这正是 model&amp;#x2F;view 架构的长项。&lt;/p&gt;</summary>
     
     
     
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>9、多线程</title>
+    <link href="https://tding.top/archives/6231331.html"/>
+    <id>https://tding.top/archives/6231331.html</id>
+    <published>2022-06-23T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:28.946Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;通常情况下，应用程序都是在一个线程中执行操作。但是，当调用一个耗时操作（例如，大批量I&amp;#x2F;O或大量矩阵变换等CPU密集操作）时，用户界面常常会冻结。而使用多线程可以解决这一问题。&lt;/p&gt;
+&lt;p&gt;多线程有以下几个优势：&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8、Socket通信</title>
+    <link href="https://tding.top/archives/6211508.html"/>
+    <id>https://tding.top/archives/6211508.html</id>
+    <published>2022-06-21T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:19.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Qt中提供的所有的Socket类都是非阻塞的。&lt;/p&gt;
+&lt;p&gt;Qt中常用的用于socket通信的套接字类:&lt;br&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7、文件系统</title>
+    <link href="https://tding.top/archives/6181735.html"/>
+    <id>https://tding.top/archives/6181735.html</id>
+    <published>2022-06-18T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:10.685Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;文件操作是应用程序必不可少的部分。Qt 作为一个通用开发库，提供了跨平台的文件操作能力。Qt 通过QIODevice提供了对 I&amp;#x2F;O 设备的抽象，这些设备具有读写字节块的能力。下面是 I&amp;#x2F;O 设备的类图（Qt5）：&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6、绘图和绘图设备</title>
+    <link href="https://tding.top/archives/6171531.html"/>
+    <id>https://tding.top/archives/6171531.html</id>
+    <published>2022-06-17T00:00:00.000Z</published>
+    <updated>2022-07-08T11:20:02.035Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;6-1-QPainter&quot;&gt;&lt;a href=&quot;#6-1-QPainter&quot; class=&quot;headerlink&quot; title=&quot;6.1 QPainter&quot;&gt;&lt;/a&gt;6.1 QPainter&lt;/h2&gt;&lt;p&gt;Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;QPainter&lt;/strong&gt;用来执行绘制的操作；&lt;strong&gt;QPaintDevice&lt;/strong&gt;是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；&lt;strong&gt;QPaintEngine&lt;/strong&gt;提供了画笔（QPainter）在不同的设备上进行绘制的统一的接口。QPaintEngine类应用于QPainter和QPaintDevice之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心QPaintEngine这个类的。我们可以把QPainter理解成画笔；把QPaintDevice理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了QPaintEngine类，这个类让不同的纸张、屏幕都能使用一种画笔。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5、Qt消息机制和事件</title>
+    <link href="https://tding.top/archives/6151603.html"/>
+    <id>https://tding.top/archives/6151603.html</id>
+    <published>2022-06-15T00:00:00.000Z</published>
+    <updated>2022-07-08T11:19:52.110Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;5-1-事件&quot;&gt;&lt;a href=&quot;#5-1-事件&quot; class=&quot;headerlink&quot; title=&quot;5.1 事件&quot;&gt;&lt;/a&gt;5.1 事件&lt;/h2&gt;&lt;p&gt;事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。&lt;/p&gt;
+&lt;p&gt;在前面我们也曾经简单提到，&lt;strong&gt;Qt 程序&lt;/strong&gt;需要在main()函数创建一个QApplication对象，然后调用它的exec()函数。这个函数就是开始 Qt 的事件循环。在执行exec()函数之后，程序将进入事件循环来监听应用程序的事件。当事件发生时，Qt 将创建一个事件对象。&lt;strong&gt;Qt 中所有事件类都继承于QEvent&lt;/strong&gt;。在事件对象创建完毕后，Qt 将这个事件对象传递给QObject的event()函数。&lt;strong&gt;event()函数并不直接处理事件，而是按照事件对象的类型分派给特定的事件处理函数&lt;/strong&gt;（event handler），关于这一点，会在后边详细说明。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4、Qt窗口系统</title>
+    <link href="https://tding.top/archives/6101141.html"/>
+    <id>https://tding.top/archives/6101141.html</id>
+    <published>2022-06-10T00:00:00.000Z</published>
+    <updated>2022-07-08T11:19:40.178Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;4-1-Qt窗口坐标体系&quot;&gt;&lt;a href=&quot;#4-1-Qt窗口坐标体系&quot; class=&quot;headerlink&quot; title=&quot;4.1 Qt窗口坐标体系&quot;&gt;&lt;/a&gt;4.1 Qt窗口坐标体系&lt;/h2&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3、信号和槽机制</title>
+    <link href="https://tding.top/archives/60870931.html"/>
+    <id>https://tding.top/archives/60870931.html</id>
+    <published>2022-06-08T00:00:00.000Z</published>
+    <updated>2022-07-08T11:19:26.608Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;信号槽是 Qt 框架引以为豪的机制之一。所谓信号槽，实际就是观察者模式。&lt;strong&gt;当某个事件发生之后&lt;/strong&gt;，比如，按钮检测到自己被点击了一下，&lt;strong&gt;它就会发出一个信号（signal）&lt;/strong&gt;。这种发出是没有目的的，类似广播。&lt;strong&gt;如果有对象对这个信号感兴趣，它就会使用连接（connect）函数&lt;/strong&gt;，意思是，&lt;strong&gt;将想要处理的信号和自己的一个函数（称为槽（slot））绑定来处理这个信号&lt;/strong&gt;。也就是说，&lt;strong&gt;当信号发出时，被连接的槽函数会自动被回调&lt;/strong&gt;。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。（这里提一句，Qt 的信号槽使用了额外的处理来实现，并不是 GoF 经典的观察者模式的实现方式。）&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2、创建Qt项目</title>
+    <link href="https://tding.top/archives/6051431.html"/>
+    <id>https://tding.top/archives/6051431.html</id>
+    <published>2022-06-05T00:00:00.000Z</published>
+    <updated>2022-07-08T11:19:08.767Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;2-1-使用向导创建&quot;&gt;&lt;a href=&quot;#2-1-使用向导创建&quot; class=&quot;headerlink&quot; title=&quot;2.1 使用向导创建&quot;&gt;&lt;/a&gt;2.1 使用向导创建&lt;/h2&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1、Qt概述</title>
+    <link href="https://tding.top/archives/6041302.html"/>
+    <id>https://tding.top/archives/6041302.html</id>
+    <published>2022-06-04T13:20:03.000Z</published>
+    <updated>2022-07-08T11:18:52.788Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-1-什么是Qt&quot;&gt;&lt;a href=&quot;#1-1-什么是Qt&quot; class=&quot;headerlink&quot; title=&quot;1.1 什么是Qt&quot;&gt;&lt;/a&gt;1.1 什么是Qt&lt;/h2&gt;&lt;p&gt;Qt是一个&lt;strong&gt;跨平台&lt;/strong&gt;的C++&lt;strong&gt;图形用户界面应用程序框架&lt;/strong&gt;。它为应用程序开发者提供建立艺术级图形界面所需的所有功能。它是完全面向对象的，很容易扩展，并且允许真正的组件编程。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Qt" scheme="https://tding.top/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://tding.top/tags/C/"/>
     
   </entry>
   
