@@ -61,7 +61,7 @@
     <link href="https://tding.top/archives/6291345.html"/>
     <id>https://tding.top/archives/6291345.html</id>
     <published>2022-06-29T00:00:00.000Z</published>
-    <updated>2022-07-09T09:50:54.401Z</updated>
+    <updated>2022-07-09T10:04:12.556Z</updated>
     
     
     <summary type="html">&lt;p&gt;Qt的应用程序编译出来之后,将单独的exe程序拿到其他PC上运行是运行不起来的,会提示缺少对应的动态链接库。我们需要去Qt的安装目录下找到所有的Qt程序运行时所依赖的，将他们和exe程序放到同一目录下，程序才可以执行。&lt;/p&gt;
@@ -216,11 +216,11 @@
     <link href="https://tding.top/archives/61071251.html"/>
     <id>https://tding.top/archives/61071251.html</id>
     <published>2022-06-10T00:00:00.000Z</published>
-    <updated>2022-07-09T09:48:36.623Z</updated>
+    <updated>2022-07-09T10:05:06.096Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;4-1-Qt窗口坐标体系&quot;&gt;&lt;a href=&quot;#4-1-Qt窗口坐标体系&quot; class=&quot;headerlink&quot; title=&quot;4.1 Qt窗口坐标体系&quot;&gt;&lt;/a&gt;4.1 Qt窗口坐标体系&lt;/h2&gt;&lt;h3 id=&quot;坐标体系&quot;&gt;&lt;a href=&quot;#坐标体系&quot; class=&quot;headerlink&quot; title=&quot;坐标体系&quot;&gt;&lt;/a&gt;坐标体系&lt;/h3&gt;&lt;p&gt;以左上角为原点，X向右增加，Y向下增加。&lt;/p&gt;
-&lt;p&gt;​                            &lt;img src=&quot;/%5Cphotos%5Cimage011.png&quot; alt=&quot;QT&quot;&gt;   &lt;/p&gt;
+&lt;p&gt;​                            &lt;img src=&quot;/photos/image011.png&quot; alt=&quot;QT&quot;&gt;   &lt;/p&gt;
 &lt;p&gt;对于嵌套窗口，其坐标是&lt;strong&gt;相对于父窗口&lt;/strong&gt;来说的。&lt;/p&gt;
 &lt;h2 id=&quot;4-2-QWidget&quot;&gt;&lt;a href=&quot;#4-2-QWidget&quot; class=&quot;headerlink&quot; title=&quot;4.2 QWidget&quot;&gt;&lt;/a&gt;4.2 QWidget&lt;/h2&gt;&lt;p&gt;所有窗口及窗口控件都是从QWidget直接或间接派生出来的。&lt;/p&gt;
 &lt;h3 id=&quot;4-2-1-对象模型&quot;&gt;&lt;a href=&quot;#4-2-1-对象模型&quot; class=&quot;headerlink&quot; title=&quot;4.2.1 对象模型&quot;&gt;&lt;/a&gt;4.2.1 对象模型&lt;/h3&gt;&lt;p&gt;在Qt中创建对象的时候会提供一个Parent对象指针，下面来解释这个parent到底是干什么的。&lt;/p&gt;
