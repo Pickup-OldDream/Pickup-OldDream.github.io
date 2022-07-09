@@ -135,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -215,7 +215,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tding.top/archives/6211508.html">
+    <link itemprop="mainEntityOfPage" href="https://tding.top/archives/61270931.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -229,7 +229,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/6211508.html" class="post-title-link" itemprop="url">8、Socket通信</a>
+            <a href="/archives/61270931.html" class="post-title-link" itemprop="url">5、Qt消息机制和事件</a>
         </h2>
 
         <div class="post-meta">
@@ -239,14 +239,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-06-21 00:00:00" itemprop="dateCreated datePublished" datetime="2022-06-21T00:00:00Z">2022-06-21</time>
+              <time title="创建时间：2022-06-12 00:00:00" itemprop="dateCreated datePublished" datetime="2022-06-12T00:00:00Z">2022-06-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-08 11:20:19" itemprop="dateModified" datetime="2022-07-08T11:20:19Z">2022-07-08</time>
+                <time title="修改时间：2022-07-09 09:38:56" itemprop="dateModified" datetime="2022-07-09T09:38:56Z">2022-07-09</time>
               </span>
 
           
@@ -258,8 +258,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/6211508.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/6211508.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/61270931.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/61270931.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -269,14 +269,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.7k</span>
+              <span>12k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>11 分钟</span>
             </span>
 
         </div>
@@ -288,11 +288,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Qt中提供的所有的Socket类都是非阻塞的。</p>
-<p>Qt中常用的用于socket通信的套接字类:<br>
+          <h2 id="5-1-事件"><a href="#5-1-事件" class="headerlink" title="5.1 事件"></a>5.1 事件</h2><p>事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。</p>
+<p>在前面我们也曾经简单提到，<strong>Qt 程序</strong>需要在main()函数创建一个QApplication对象，然后调用它的exec()函数。这个函数就是开始 Qt 的事件循环。在执行exec()函数之后，程序将进入事件循环来监听应用程序的事件。当事件发生时，Qt 将创建一个事件对象。<strong>Qt 中所有事件类都继承于QEvent</strong>。在事件对象创建完毕后，Qt 将这个事件对象传递给QObject的event()函数。<strong>event()函数并不直接处理事件，而是按照事件对象的类型分派给特定的事件处理函数</strong>（event handler），关于这一点，会在后边详细说明。</p>
+<p>在所有组件的父类QWidget中，定义了很多事件处理的回调函数，如<br>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/6211508.html#more" rel="contents">
+              <a class="btn" href="/archives/61270931.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -316,7 +317,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tding.top/archives/6181735.html">
+    <link itemprop="mainEntityOfPage" href="https://tding.top/archives/61071251.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -330,7 +331,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/archives/6181735.html" class="post-title-link" itemprop="url">7、文件系统</a>
+            <a href="/archives/61071251.html" class="post-title-link" itemprop="url">4、Qt窗口系统</a>
         </h2>
 
         <div class="post-meta">
@@ -340,14 +341,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-06-18 00:00:00" itemprop="dateCreated datePublished" datetime="2022-06-18T00:00:00Z">2022-06-18</time>
+              <time title="创建时间：2022-06-10 00:00:00" itemprop="dateCreated datePublished" datetime="2022-06-10T00:00:00Z">2022-06-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-09 06:40:56" itemprop="dateModified" datetime="2022-07-09T06:40:56Z">2022-07-09</time>
+                <time title="修改时间：2022-07-09 09:38:43" itemprop="dateModified" datetime="2022-07-09T09:38:43Z">2022-07-09</time>
               </span>
 
           
@@ -359,8 +360,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/6181735.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/6181735.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/61071251.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/61071251.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -370,14 +371,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.6k</span>
+              <span>21k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>19 分钟</span>
             </span>
 
         </div>
@@ -389,111 +390,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>文件操作是应用程序必不可少的部分。Qt 作为一个通用开发库，提供了跨平台的文件操作能力。Qt 通过QIODevice提供了对 I&#x2F;O 设备的抽象，这些设备具有读写字节块的能力。下面是 I&#x2F;O 设备的类图（Qt5）：</p>
+          <h2 id="4-1-Qt窗口坐标体系"><a href="#4-1-Qt窗口坐标体系" class="headerlink" title="4.1 Qt窗口坐标体系"></a>4.1 Qt窗口坐标体系</h2><h3 id="坐标体系"><a href="#坐标体系" class="headerlink" title="坐标体系"></a>坐标体系</h3><p>以左上角为原点，X向右增加，Y向下增加。</p>
+<p>​                            <img src="/%5Cphotos%5Cimage011.png">   </p>
+<p>对于嵌套窗口，其坐标是<strong>相对于父窗口</strong>来说的。</p>
+<h2 id="4-2-QWidget"><a href="#4-2-QWidget" class="headerlink" title="4.2 QWidget"></a>4.2 QWidget</h2><p>所有窗口及窗口控件都是从QWidget直接或间接派生出来的。</p>
+<h3 id="4-2-1-对象模型"><a href="#4-2-1-对象模型" class="headerlink" title="4.2.1 对象模型"></a>4.2.1 对象模型</h3><p>在Qt中创建对象的时候会提供一个Parent对象指针，下面来解释这个parent到底是干什么的。</p>
+<ul>
+<li><p>QObject是以对象树的形式组织起来的。</p>
+</li>
+<li><p>当你创建一个QObject对象时，会看到QObject的构造函数接收一个QObject指针作为参数，这个参数就是 parent，也就是父对象指针。</p>
+</li>
+</ul>
+<p>这相当于，<strong>在创建QObject对象时，可以提供一个其父对象，我们创建的这个QObject对象会自动添加到其父对象的children()列表。</strong></p>
+<ul>
+<li><strong>当父对象析构的时候，这个列表中的所有对象也会被析构。（注意，这里的父对象并不是继承意义上的父类！）</strong></li>
+</ul>
+<p>这种机制在 GUI 程序设计中相当有用。例如，一个按钮有一个QShortcut（快捷键）对象作为其子对象。当我们删除按钮的时候，这个快捷键理应被删除。这是合理的。</p>
+<ul>
+<li><p>QWidget是能够在屏幕上显示的一切组件的父类。</p>
+</li>
+<li><p><strong>QWidget****继承自QObject，因此也继承了这种对象树关系。一个孩子自动地成为父组件的一个子组件</strong>。因此，它会显示在父组件的坐标系统中，被父组件的边界剪裁。例如，当用户关闭一个对话框的时候，应用程序将其删除，那么，我们希望属于这个对话框的按钮、图标等应该一起被删除。事实就是如此，因为这些都是对话框的子组件。</p>
+</li>
+<li><p>当然，<strong>我们也可以自己删除子对象，它们会自动从其父对象列表中删除。</strong>比如，当我们删除了一个工具栏时，其所在的主窗口会自动将该工具栏从其子对象列表中删除，并且自动调整屏幕显示。</p>
+</li>
+</ul>
+<p>Qt 引入对象树的概念，在一定程度上解决了内存问题。</p>
+<ul>
+<li><p>当一个QObject对象在堆上创建的时候，Qt 会同时为其创建一个对象树。不过，对象树中对象的顺序是没有定义的。这意味着，销毁这些对象的顺序也是未定义的。</p>
+</li>
+<li><p>任何对象树中的 QObject对象 delete 的时候，如果这个对象有 parent，则自动将其从 parent 的children()列表中删除；如果有孩子，则自动 delete 每一个孩子。Qt 保证没有QObject会被 delete 两次，这是由析构顺序决定的。</p>
+</li>
+</ul>
+<p>如果QObject在栈上创建，Qt 保持同样的行为。正常情况下，这也不会发生什么问题。来看下下面的代码片段：<br>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/archives/6181735.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-  
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tding.top/archives/6171531.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head.jpg">
-      <meta itemprop="name" content="Mr.Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拾梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/6171531.html" class="post-title-link" itemprop="url">6、绘图和绘图设备</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-17 00:00:00" itemprop="dateCreated datePublished" datetime="2022-06-17T00:00:00Z">2022-06-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-09 06:40:48" itemprop="dateModified" datetime="2022-07-09T06:40:48Z">2022-07-09</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/6171531.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/6171531.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="6-1-QPainter"><a href="#6-1-QPainter" class="headerlink" title="6.1 QPainter"></a>6.1 QPainter</h2><p>Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。</p>
-<p><strong>QPainter</strong>用来执行绘制的操作；<strong>QPaintDevice</strong>是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；<strong>QPaintEngine</strong>提供了画笔（QPainter）在不同的设备上进行绘制的统一的接口。QPaintEngine类应用于QPainter和QPaintDevice之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心QPaintEngine这个类的。我们可以把QPainter理解成画笔；把QPaintDevice理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了QPaintEngine类，这个类让不同的纸张、屏幕都能使用一种画笔。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/6171531.html#more" rel="contents">
+              <a class="btn" href="/archives/61071251.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -884,7 +815,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1189,23 +1120,23 @@ if(canvas.getContext){
             
             
               <li>
-                <a href="/archives/undefined.html" title="" target="_blank"></a>
-              </li>
-            
-              <li>
-                <a href="/archives/undefined.html" title="" target="_blank"></a>
-              </li>
-            
-              <li>
-                <a href="/archives/undefined.html" title="" target="_blank"></a>
-              </li>
-            
-              <li>
-                <a href="/archives/undefined.html" title="" target="_blank"></a>
-              </li>
-            
-              <li>
                 <a href="/archives/10002.html" title="Makefile构建stm32重定向串口printf" target="_blank">Makefile构建stm32重定向串口printf</a>
+              </li>
+            
+              <li>
+                <a href="/archives/342954a3.html" title="如何使用openocd烧录程序" target="_blank">如何使用openocd烧录程序</a>
+              </li>
+            
+              <li>
+                <a href="/archives/6291345.html" title="10、数库操作" target="_blank">10、数库操作</a>
+              </li>
+            
+              <li>
+                <a href="/archives/ebd52ec9.html" title="关于Markdown的语法" target="_blank">关于Markdown的语法</a>
+              </li>
+            
+              <li>
+                <a href="/archives/6251621.html" title="10、数库操作" target="_blank">10、数库操作</a>
               </li>
             
           </ul>
@@ -1504,13 +1435,13 @@ if(canvas.getContext){
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">255k</span>
+    <span title="站点总字数">83k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:52</span>
+    <span title="站点阅读时长">1:15</span>
 </div>
 
 <!--
