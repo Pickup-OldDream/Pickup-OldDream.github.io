@@ -57,11 +57,11 @@
   </entry>
   
   <entry>
-    <title>10、数库操作</title>
+    <title>11、Qt程序打包</title>
     <link href="https://tding.top/archives/6291345.html"/>
     <id>https://tding.top/archives/6291345.html</id>
     <published>2022-06-29T00:00:00.000Z</published>
-    <updated>2022-07-09T09:38:22.548Z</updated>
+    <updated>2022-07-09T09:40:09.754Z</updated>
     
     
     <summary type="html">&lt;p&gt;Qt的应用程序编译出来之后,将单独的exe程序拿到其他PC上运行是运行不起来的,会提示缺少对应的动态链接库。我们需要去Qt的安装目录下找到所有的Qt程序运行时所依赖的，将他们和exe程序放到同一目录下，程序才可以执行。&lt;/p&gt;
