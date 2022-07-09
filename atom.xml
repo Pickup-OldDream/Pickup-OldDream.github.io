@@ -61,7 +61,7 @@
     <link href="https://tding.top/archives/6291345.html"/>
     <id>https://tding.top/archives/6291345.html</id>
     <published>2022-06-29T00:00:00.000Z</published>
-    <updated>2022-07-09T09:40:09.754Z</updated>
+    <updated>2022-07-09T09:50:54.401Z</updated>
     
     
     <summary type="html">&lt;p&gt;Qt的应用程序编译出来之后,将单独的exe程序拿到其他PC上运行是运行不起来的,会提示缺少对应的动态链接库。我们需要去Qt的安装目录下找到所有的Qt程序运行时所依赖的，将他们和exe程序放到同一目录下，程序才可以执行。&lt;/p&gt;
@@ -156,7 +156,7 @@
     <link href="https://tding.top/archives/6181735.html"/>
     <id>https://tding.top/archives/6181735.html</id>
     <published>2022-06-18T00:00:00.000Z</published>
-    <updated>2022-07-09T06:40:56.235Z</updated>
+    <updated>2022-07-09T09:53:27.578Z</updated>
     
     
     <summary type="html">&lt;p&gt;文件操作是应用程序必不可少的部分。Qt 作为一个通用开发库，提供了跨平台的文件操作能力。Qt 通过QIODevice提供了对 I&amp;#x2F;O 设备的抽象，这些设备具有读写字节块的能力。下面是 I&amp;#x2F;O 设备的类图（Qt5）：&lt;/p&gt;</summary>
@@ -175,7 +175,7 @@
     <link href="https://tding.top/archives/6171531.html"/>
     <id>https://tding.top/archives/6171531.html</id>
     <published>2022-06-17T00:00:00.000Z</published>
-    <updated>2022-07-09T06:40:48.055Z</updated>
+    <updated>2022-07-09T09:53:09.881Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;6-1-QPainter&quot;&gt;&lt;a href=&quot;#6-1-QPainter&quot; class=&quot;headerlink&quot; title=&quot;6.1 QPainter&quot;&gt;&lt;/a&gt;6.1 QPainter&lt;/h2&gt;&lt;p&gt;Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于QPainter，QPainterDevice和QPaintEngine三个类。&lt;/p&gt;
@@ -195,7 +195,7 @@
     <link href="https://tding.top/archives/61270931.html"/>
     <id>https://tding.top/archives/61270931.html</id>
     <published>2022-06-12T00:00:00.000Z</published>
-    <updated>2022-07-09T09:38:56.534Z</updated>
+    <updated>2022-07-09T09:52:54.644Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;5-1-事件&quot;&gt;&lt;a href=&quot;#5-1-事件&quot; class=&quot;headerlink&quot; title=&quot;5.1 事件&quot;&gt;&lt;/a&gt;5.1 事件&lt;/h2&gt;&lt;p&gt;事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。&lt;/p&gt;
@@ -216,11 +216,11 @@
     <link href="https://tding.top/archives/61071251.html"/>
     <id>https://tding.top/archives/61071251.html</id>
     <published>2022-06-10T00:00:00.000Z</published>
-    <updated>2022-07-09T09:38:43.147Z</updated>
+    <updated>2022-07-09T09:48:36.623Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;4-1-Qt窗口坐标体系&quot;&gt;&lt;a href=&quot;#4-1-Qt窗口坐标体系&quot; class=&quot;headerlink&quot; title=&quot;4.1 Qt窗口坐标体系&quot;&gt;&lt;/a&gt;4.1 Qt窗口坐标体系&lt;/h2&gt;&lt;h3 id=&quot;坐标体系&quot;&gt;&lt;a href=&quot;#坐标体系&quot; class=&quot;headerlink&quot; title=&quot;坐标体系&quot;&gt;&lt;/a&gt;坐标体系&lt;/h3&gt;&lt;p&gt;以左上角为原点，X向右增加，Y向下增加。&lt;/p&gt;
-&lt;p&gt;​                            &lt;img src=&quot;/%5Cphotos%5Cimage011.png&quot;&gt;   &lt;/p&gt;
+&lt;p&gt;​                            &lt;img src=&quot;/%5Cphotos%5Cimage011.png&quot; alt=&quot;QT&quot;&gt;   &lt;/p&gt;
 &lt;p&gt;对于嵌套窗口，其坐标是&lt;strong&gt;相对于父窗口&lt;/strong&gt;来说的。&lt;/p&gt;
 &lt;h2 id=&quot;4-2-QWidget&quot;&gt;&lt;a href=&quot;#4-2-QWidget&quot; class=&quot;headerlink&quot; title=&quot;4.2 QWidget&quot;&gt;&lt;/a&gt;4.2 QWidget&lt;/h2&gt;&lt;p&gt;所有窗口及窗口控件都是从QWidget直接或间接派生出来的。&lt;/p&gt;
 &lt;h3 id=&quot;4-2-1-对象模型&quot;&gt;&lt;a href=&quot;#4-2-1-对象模型&quot; class=&quot;headerlink&quot; title=&quot;4.2.1 对象模型&quot;&gt;&lt;/a&gt;4.2.1 对象模型&lt;/h3&gt;&lt;p&gt;在Qt中创建对象的时候会提供一个Parent对象指针，下面来解释这个parent到底是干什么的。&lt;/p&gt;
@@ -266,7 +266,7 @@
     <link href="https://tding.top/archives/60870931.html"/>
     <id>https://tding.top/archives/60870931.html</id>
     <published>2022-06-08T00:00:00.000Z</published>
-    <updated>2022-07-09T06:40:23.169Z</updated>
+    <updated>2022-07-09T09:52:02.172Z</updated>
     
     
     <summary type="html">&lt;p&gt;信号槽是 Qt 框架引以为豪的机制之一。所谓信号槽，实际就是观察者模式。&lt;strong&gt;当某个事件发生之后&lt;/strong&gt;，比如，按钮检测到自己被点击了一下，&lt;strong&gt;它就会发出一个信号（signal）&lt;/strong&gt;。这种发出是没有目的的，类似广播。&lt;strong&gt;如果有对象对这个信号感兴趣，它就会使用连接（connect）函数&lt;/strong&gt;，意思是，&lt;strong&gt;将想要处理的信号和自己的一个函数（称为槽（slot））绑定来处理这个信号&lt;/strong&gt;。也就是说，&lt;strong&gt;当信号发出时，被连接的槽函数会自动被回调&lt;/strong&gt;。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。（这里提一句，Qt 的信号槽使用了额外的处理来实现，并不是 GoF 经典的观察者模式的实现方式。）&lt;/p&gt;</summary>
@@ -285,7 +285,7 @@
     <link href="https://tding.top/archives/6051431.html"/>
     <id>https://tding.top/archives/6051431.html</id>
     <published>2022-06-05T00:00:00.000Z</published>
-    <updated>2022-07-09T06:39:49.740Z</updated>
+    <updated>2022-07-09T09:52:25.465Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;2-1-使用向导创建&quot;&gt;&lt;a href=&quot;#2-1-使用向导创建&quot; class=&quot;headerlink&quot; title=&quot;2.1 使用向导创建&quot;&gt;&lt;/a&gt;2.1 使用向导创建&lt;/h2&gt;</summary>

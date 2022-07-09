@@ -61,23 +61,23 @@
 <p>如果我们一件配置好了环境变量，在dos下输入windeployqt会有相应的信息输出,否则需要指定该工具的完全路径才能够正常使用,例如:</p>
 <p> C:\Qt\Qt5.5.0\5.5\mingw492_32\bin\windeployqt</p>
 <p>​                               </p>
-<p> <img src="/%5Cphotos%5Cimage031.png"></p>
+<p> <img src="/%5Cphotos%5Cimage031.png" alt="Qt"></p>
 <ul>
 <li>把新生成的exe文件放到指定的目录下:</li>
 </ul>
 <p>例如: C:\Users\Kevin\Desktop\qt_test</p>
-<p> <img src="/%5Cphotos%5Cimage032.png"></p>
+<p> <img src="/%5Cphotos%5Cimage032.png" alt="Qt"></p>
 <ul>
 <li>在控制台窗口中通命令进入到上述目录中</li>
 </ul>
-<p> <img src="/%5Cphotos%5Cimage033.png"></p>
+<p> <img src="/%5Cphotos%5Cimage033.png" alt="Qt"></p>
 <ul>
 <li>执行命令windeployqt 应用程序名(qttext.exe)</li>
 </ul>
-<p> <img src="/%5Cphotos%5Cimage034.png"></p>
+<p> <img src="/%5Cphotos%5Cimage034.png" alt="Qt"></p>
 <ul>
 <li><p>应用程序所需的附加依赖项就会全部拷贝到我们指定的目录中</p>
-<p><img src="/%5Cphotos%5Cimage035.png"></p>
+<p><img src="/%5Cphotos%5Cimage035.png" alt="Qt"></p>
 </li>
 </ul>
 <p><strong>免责声明：</strong>本文根据<a href="https://yun.itheima.com/">传智播客</a>知识整理，仅为个人收藏，知识分享，请勿商用！</p>
@@ -594,7 +594,7 @@
     <url>/archives/6181735.html</url>
     <content><![CDATA[<p>文件操作是应用程序必不可少的部分。Qt 作为一个通用开发库，提供了跨平台的文件操作能力。Qt 通过QIODevice提供了对 I&#x2F;O 设备的抽象，这些设备具有读写字节块的能力。下面是 I&#x2F;O 设备的类图（Qt5）：</p>
  <span id="more"></span>
-<p><img src="/%5Cphotos%5Cimage030.png"></p>
+<p><img src="/%5Cphotos%5Cimage030.png" alt="Qt"></p>
 <ul>
 <li><p>QIODevice：所有 I&#x2F;O 设备类的父类，提供了字节块读写的通用操作以及基本接口；</p>
 </li>
@@ -756,7 +756,7 @@
 <p><strong>QPainter</strong>用来执行绘制的操作；<strong>QPaintDevice</strong>是一个二维空间的抽象，这个二维空间允许QPainter在其上面进行绘制，也就是QPainter工作的空间；<strong>QPaintEngine</strong>提供了画笔（QPainter）在不同的设备上进行绘制的统一的接口。QPaintEngine类应用于QPainter和QPaintDevice之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心QPaintEngine这个类的。我们可以把QPainter理解成画笔；把QPaintDevice理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了QPaintEngine类，这个类让不同的纸张、屏幕都能使用一种画笔。</p>
  <span id="more"></span>
 <p>下图给出了这三个类之间的层次结构:</p>
-<p><img src="/%5Cphotos%5Cimage027.png"></p>
+<p><img src="/%5Cphotos%5Cimage027.png" alt="Qt"></p>
 <p>上面的示意图告诉我们，<strong>Qt 的绘图系统实际上是，使用QPainter在QPainterDevice上进行绘制，它们之间使用QPaintEngine进行通讯（也就是翻译QPainter的指令）。</strong></p>
 <p>下面我们通过一个实例来介绍QPainter的使用：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">PaintedWidget</span> : <span class="keyword">public</span> QWidget</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">  <span class="built_in">PaintedWidget</span>(QWidget *parent = <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">paintEvent</span><span class="params">(QPaintEvent *)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -786,13 +786,13 @@
 <p>下面我们来看同一个图像文件在QPixmap和QBitmap下的不同表现：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">PaintWidget::paintEvent</span><span class="params">(QPaintEvent *)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPixmap <span class="title">pixmap</span><span class="params">(<span class="string">&quot;:/Image/butterfly.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPixmap <span class="title">pixmap1</span><span class="params">(<span class="string">&quot;:/Image/butterfly1.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QBitmap <span class="title">bitmap</span><span class="params">(<span class="string">&quot;:/Image/butterfly.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QBitmap <span class="title">bitmap1</span><span class="params">(<span class="string">&quot;:/Image/butterfly1.png&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">0</span>, <span class="number">0</span>, pixmap);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">200</span>, <span class="number">0</span>, pixmap1);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">0</span>, <span class="number">130</span>, bitmap);</span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawPixmap</span>(<span class="number">200</span>, <span class="number">130</span>, bitmap1);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/%5Cphotos%5Cimage028.png"></p>
+<p><img src="/%5Cphotos%5Cimage028.png" alt="Qt"></p>
 <p>这里我们给出了两张png图片。butterfly1.png是没有透明色的纯白背景，而butterfly.png是具有透明色的背景。我们分别使用QPixmap和QBitmap来加载它们。注意看它们的区别：白色的背景在QBitmap中消失了，而透明色在QBitmap中转换成了黑色；其他颜色则是使用点的疏密程度来体现的。</p>
 <p>QPixmap使用底层平台的绘制系统进行绘制，无法提供像素级别的操作，而<strong>QImage则是使用独立于硬件的绘制系统，实际上是自己绘制自己，因此提供了像素级别的操作，并且能够在不同系统之上提供一个一致的显示形式。</strong></p>
 <p>我们声明了一个QImage对象，大小是300 x 300，颜色模式是RGB32，即使用32位数值表示一个颜色的RGB值，也就是说每种颜色使用8位。然后我们对每个像素进行颜色赋值，从而构成了这个图像。我们可以把QImage想象成一个RGB颜色的二维数组，记录了每一像素的颜色。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">PaintWidget::paintEvent</span><span class="params">(QPaintEvent *)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">QImage <span class="title">image</span><span class="params">(<span class="number">300</span>, <span class="number">300</span>, QImage::Format_RGB32)</span></span>;</span><br><span class="line"></span><br><span class="line">  QRgb value;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//将图片背景填充为白色</span></span><br><span class="line"></span><br><span class="line">  image.<span class="built_in">fill</span>(Qt::white);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//改变指定区域的像素点的值</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">50</span>; i&lt;<span class="number">100</span>; ++i)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">50</span>; j&lt;<span class="number">100</span>; ++j)</span><br><span class="line"></span><br><span class="line">​    &#123;</span><br><span class="line"></span><br><span class="line">​      value = <span class="built_in">qRgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">// 红色</span></span><br><span class="line"></span><br><span class="line">​      image.<span class="built_in">setPixel</span>(i, j, value);</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//将图片绘制到窗口中</span></span><br><span class="line"></span><br><span class="line">  painter.<span class="built_in">drawImage</span>(<span class="built_in">QPoint</span>(<span class="number">0</span>, <span class="number">0</span>), image);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/%5Cphotos%5Cimage029.png"></p>
+<p><img src="/%5Cphotos%5Cimage029.png" alt="Qt"></p>
 <p>QImage与QPixmap的区别</p>
 <ul>
 <li><p>QPixmap主要是用于绘图，针对屏幕显示而最佳化设计，QImage主要是为图像I&#x2F;O、图片访问和像素修改而设计的</p>
@@ -877,7 +877,7 @@
 <li>在mouseReleaseEvent()函数中，我们使用了另外一种QString的构造方法。我们使用类似 C 风格的格式化函数sprintf()来构造QString。</li>
 </ul>
 <p>运行上面的代码，当我们点击了一下鼠标之后，label 上将显示鼠标当前坐标值。</p>
-<p>​                               <img src="/%5Cphotos%5Cimage025.png"></p>
+<p>​                               <img src="/%5Cphotos%5Cimage025.png" alt="Qt"></p>
 <p>为什么要点击鼠标之后才能在mouseMoveEvent()函数中显示鼠标坐标值？</p>
 <p><strong>这是因为QWidget中有一个mouseTracking属性，该属性用于设置是否追踪鼠标。只有鼠标被追踪时，mouseMoveEvent()才会发出。如果mouseTracking是 false（默认即是），组件在至少一次鼠标点击之后，才能够被追踪，也就是能够发出mouseMoveEvent()事件。如果mouseTracking为 true，则mouseMoveEvent()直接可以被发出。</strong></p>
 <p>知道了这一点，我们就可以在main()函数中添加如下代码：</p>
@@ -916,7 +916,7 @@
 <p>由此可以见，event()是一个集中处理不同类型的事件的地方。如果你不想重写一大堆事件处理器，就可以重写这个event()函数，通过QEvent::type()判断不同的事件。鉴于重写event()函数需要十分小心注意父类的同名函数的调用，一不留神就可能出现问题，所以一般还是建议只重写事件处理器（当然，也必须记得是不是应该调用父类的同名处理器）。这其实暗示了event()函数的另外一个作用：屏蔽掉某些不需要的事件处理器。正如我们前面的CustomTextEdit例子看到的那样，我们创建了一个只能响应 tab 键的组件。这种作用是重写事件处理器所不能实现的。</p>
 <h2 id="5-3-事件过滤器"><a href="#5-3-事件过滤器" class="headerlink" title="5.3 事件过滤器"></a>5.3 事件过滤器</h2><p>有时候，对象需要查看、甚至要拦截发送到另外对象的事件。例如，对话框可能想要拦截按键事件，不让别的组件接收到；或者要修改回车键的默认处理。</p>
 <p>通过前面的章节，我们已经知道，Qt 创建了QEvent事件对象之后，会调用QObject的event()函数处理事件的分发。显然，我们可以在event()函数中实现拦截的操作。由于event()函数是 protected 的，因此，需要继承已有类。如果组件很多，就需要重写很多个event()函数。这当然相当麻烦，更不用说重写event()函数还得小心一堆问题。好在 Qt 提供了另外一种机制来达到这一目的：事件过滤器。</p>
-<p> <img src="/%5Cphotos%5Cimage026.png"></p>
+<p> <img src="/%5Cphotos%5Cimage026.png" alt="Qt"></p>
 <p>QObject有一个eventFilter()函数，用于建立事件过滤器。函数原型如下：</p>
 <p>virtual bool QObject::eventFilter ( QObject * watched, QEvent * event );</p>
 <p>这个函数正如其名字显示的那样，是一个“事件过滤器”。所谓事件过滤器，可以理解成一种过滤代码。事件过滤器会检查接收到的事件。如果这个事件是我们感兴趣的类型，就进行我们自己的处理；如果不是，就继续转发。这个函数返回一个 bool 类型，如果你想将参数 event 过滤出来，比如，<strong>不想让它继续转发，就返回 true，否则返回 false。</strong>事件过滤器的调用时间是目标对象（也就是参数里面的watched对象）接收到事件对象之前。也就是说，如果你在事件过滤器中停止了某个事件，那么，watched对象以及以后所有的事件过滤器根本不会知道这么一个事件。</p>
@@ -1047,7 +1047,7 @@
     <title>4、Qt窗口系统</title>
     <url>/archives/61071251.html</url>
     <content><![CDATA[<h2 id="4-1-Qt窗口坐标体系"><a href="#4-1-Qt窗口坐标体系" class="headerlink" title="4.1 Qt窗口坐标体系"></a>4.1 Qt窗口坐标体系</h2><h3 id="坐标体系"><a href="#坐标体系" class="headerlink" title="坐标体系"></a>坐标体系</h3><p>以左上角为原点，X向右增加，Y向下增加。</p>
-<p>​                            <img src="/%5Cphotos%5Cimage011.png">   </p>
+<p>​                            <img src="/%5Cphotos%5Cimage011.png" alt="QT">   </p>
 <p>对于嵌套窗口，其坐标是<strong>相对于父窗口</strong>来说的。</p>
 <h2 id="4-2-QWidget"><a href="#4-2-QWidget" class="headerlink" title="4.2 QWidget"></a>4.2 QWidget</h2><p>所有窗口及窗口控件都是从QWidget直接或间接派生出来的。</p>
 <h3 id="4-2-1-对象模型"><a href="#4-2-1-对象模型" class="headerlink" title="4.2.1 对象模型"></a>4.2.1 对象模型</h3><p>在Qt中创建对象的时候会提供一个Parent对象指针，下面来解释这个parent到底是干什么的。</p>
@@ -1091,7 +1091,7 @@
 <p>情况又有所不同，析构顺序就有了问题。我们看到，在上面的代码中，作为父对象的 window 会首先被析构，因为它是最后一个创建的对象。在析构过程中，它会调用子对象列表中每一个对象的析构函数，也就是说， quit 此时就被析构了。然后，代码继续执行，在 window 析构之后，quit 也会被析构，因为 quit 也是一个局部变量，在超出作用域的时候当然也需要析构。但是，这时候已经是第二次调用 quit 的析构函数了，C++ 不允许调用两次析构函数，因此，程序崩溃了。</p>
 <p>由此我们看到，Qt 的对象树机制虽然帮助我们在一定程度上解决了内存问题，但是也引入了一些值得注意的事情。这些细节在今后的开发过程中很可能时不时跳出来烦扰一下，所以，我们最好从开始就养成良好习惯，在 Qt 中，尽量在构造的时候就指定 parent 对象，并且大胆在堆上创建。</p>
 <h2 id="4-3-QMainWindow"><a href="#4-3-QMainWindow" class="headerlink" title="4.3 QMainWindow"></a>4.3 QMainWindow</h2><p>QMainWindow是一个为用户提供主窗口程序的类，包含一个菜单栏（menu bar）、多个工具栏(tool bars)、多个锚接部件(dock widgets)、一个状态栏(status bar)及一个中心部件(central widget)，是许多应用程序的基础，如文本编辑器，图片编辑器等。</p>
-<p> <img src="/%5Cphotos%5Cimage012.png"></p>
+<p> <img src="/%5Cphotos%5Cimage012.png" alt="QT"></p>
 <h3 id="4-3-1-菜单栏"><a href="#4-3-1-菜单栏" class="headerlink" title="4.3.1 菜单栏"></a>4.3.1 菜单栏</h3><p>一个主窗口最多只有一个菜单栏。位于主窗口顶部、主窗口标题栏下面。</p>
 <ul>
 <li>创建菜单栏，通过QMainWindow类的menubar（）函数获取主窗口菜单栏指针</li>
@@ -1146,15 +1146,15 @@
 
 <h2 id="4-4-资源文件"><a href="#4-4-资源文件" class="headerlink" title="4.4 资源文件"></a>4.4 资源文件</h2><p>Qt 资源系统是一个跨平台的资源机制，用于将程序运行时所需要的资源以二进制的形式存储于可执行文件内部。如果你的程序需要加载特定的资源（图标、文本翻译等），那么，将其放置在资源文件中，就再也不需要担心这些文件的丢失。也就是说，如果你将资源以资源文件形式存储，它是会编译到可执行文件内部。</p>
 <p>使用 Qt Creator 可以很方便地创建资源文件。我们可以在工程上点右键，选择“添加新文件…”，可以在 Qt 分类下找到“Qt 资源文件”：</p>
-<p> <img src="/%5Cphotos%5Cimage013.png"></p>
+<p> <img src="/%5Cphotos%5Cimage013.png" alt="QT"></p>
 <p>点击“选择…”按钮，打开“新建 Qt 资源文件”对话框。在这里我们输入资源文件的名字和路径：</p>
-<p> <img src="/%5Cphotos%5Cimage014.png"></p>
+<p> <img src="/%5Cphotos%5Cimage014.png" alt="QT"></p>
 <p>点击下一步，选择所需要的版本控制系统，然后直接选择完成。我们可以在 Qt Creator 的左侧文件列表中看到“资源文件”一项，也就是我们新创建的资源文件：</p>
-<p> <img src="/%5Cphotos%5Cimage015.png"></p>
+<p> <img src="/%5Cphotos%5Cimage015.png" alt="QT"></p>
 <p>右侧的编辑区有个“添加”，我们首先需要添加前缀，比如我们将前缀取名为 images。然后选中这个前缀，继续点击添加文件，可以找到我们所需添加的文件。这里，我们选择 document-open.png 文件。</p>
 <p>接下来，我们还可以添加另外的前缀或者另外的文件。这取决于你的需要。当我们添加完成之后，我们可以像前面一章讲解的那样，通过使用 : 开头的路径来找到这个文件。比如，我们的前缀是 &#x2F;images，文件是 document-open.png，那么就可以使用:&#x2F;images&#x2F;document-open.png找到这个文件。</p>
 <p>这么做带来的一个问题是，如果以后我们要更改文件名，比如将 docuemnt-open.png 改成 docopen.png，那么，所有使用了这个名字的路径都需要修改。所以，更好的办法是，我们给这个文件去一个“别名”，以后就以这个别名来引用这个文件。具体做法是，选中这个文件，添加别名信息：</p>
-<p> <img src="/%5Cphotos%5Cimage016.png"></p>
+<p> <img src="/%5Cphotos%5Cimage016.png" alt="QT"></p>
 <p>这样，我们可以直接使用:&#x2F;images&#x2F;doc-open引用到这个资源，无需关心图片的真实文件名。</p>
 <p>如果我们使用文本编辑器打开 res.qrc 文件，就会看到一下内容：</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">RCC</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​    <span class="tag">&lt;<span class="name">qresource</span> <span class="attr">prefix</span>=<span class="string">&quot;/images&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​      <span class="tag">&lt;<span class="name">file</span> <span class="attr">alias</span>=<span class="string">&quot;doc-open&quot;</span>&gt;</span>document-open.png<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​    <span class="tag">&lt;/<span class="name">qresource</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​    <span class="tag">&lt;<span class="name">qresource</span> <span class="attr">prefix</span>=<span class="string">&quot;/images/fr&quot;</span> <span class="attr">lang</span>=<span class="string">&quot;fr&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​      <span class="tag">&lt;<span class="name">file</span> <span class="attr">alias</span>=<span class="string">&quot;doc-open&quot;</span>&gt;</span>document-open-fr.png<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​    <span class="tag">&lt;/<span class="name">qresource</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">RCC</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1445,7 +1445,7 @@
 
 
 
-<p> <img src="/%5Cphotos%5Cimage017.png"></p>
+<p> <img src="/%5Cphotos%5Cimage017.png" alt="QT"></p>
 <h3 id="4-6-3-其他控件"><a href="#4-6-3-其他控件" class="headerlink" title="4.6.3 其他控件"></a>4.6.3 其他控件</h3><p>Qt中控件的使用方法可参考Qt提供的帮助文档。</p>
 <h2 id="4-7-布局管理器"><a href="#4-7-布局管理器" class="headerlink" title="4.7 布局管理器"></a>4.7 布局管理器</h2><p>所谓 GUI 界面，归根结底，就是一堆组件的叠加。我们创建一个窗口，把按钮放上面，把图标放上面，这样就成了一个界面。在放置时，组件的位置尤其重要。我们必须要指定组件放在哪里，以便窗口能够按照我们需要的方式进行渲染。这就涉及到组件定位的机制。</p>
 <p><strong>Qt</strong> <strong>提供了两种组件定位机制：绝对定位和布局定位。</strong></p>
@@ -1472,7 +1472,7 @@
 
 
 <p>我们在这段代码中引入了两个新的组件：QSpinBox和QSlider。QSpinBox就是只能输入数字的输入框，并且带有上下箭头的步进按钮。QSlider则是带有滑块的滑竿。</p>
-<p> <img src="/%5Cphotos%5Cimage018.png"></p>
+<p> <img src="/%5Cphotos%5Cimage018.png" alt="QT"></p>
 <p>上面的代码中<strong>window.setLayout(layout);</strong> 是将布局设置到窗口window中，在窗口中设置布局还有另一种写法：</p>
 <p>&#x2F;&#x2F;给控件设置布局</p>
 <p>  <strong>QHBoxLayout *layout &#x3D; new QHBoxLayout****（window）;</strong></p>
@@ -1500,7 +1500,7 @@
 <p>slider, &amp;QSlider::setValue);</p>
 <p>这样便避免了编译错误。</p>
 <h4 id="动手"><a href="#动手" class="headerlink" title="动手"></a>动手</h4><p>通过布局管理器搭建如下登陆界面：</p>
-<p> <img src="/%5Cphotos%5Cimage019.png"></p>
+<p> <img src="/%5Cphotos%5Cimage019.png" alt="QT"></p>
 <h3 id="4-7-2-自定义控件"><a href="#4-7-2-自定义控件" class="headerlink" title="4.7.2 自定义控件"></a>4.7.2 自定义控件</h3><p>在搭建Qt窗口界面的时候，在一个项目中很多窗口，或者是窗口中的某个模块会被经常性的重复使用。一般遇到这种情况我们都会将这个窗口或者模块拿出来做成一个独立的窗口类，以备以后重复使用。</p>
 <p>在使用Qt的ui文件搭建界面的时候，工具栏栏中只为我们提供了标准的窗口控件，如果我们想使用自定义控件怎么办？</p>
 <p>例如：我们从QWidget派生出一个类SmallWidget，实现了一个自定窗口，</p>
@@ -1508,16 +1508,16 @@
 
 <p>那么这个SmallWidget可以作为独立的窗口显示,也可以作为一个控件来使用：</p>
 <p>打开Qt的.ui文件,因为SmallWidget是派生自Qwidget类,所以需要在ui文件中先放入一个QWidget控件, 然后再上边鼠标右键</p>
-<p> <img src="/%5Cphotos%5Cimage020.png"></p>
+<p> <img src="/%5Cphotos%5Cimage020.png" alt="QT"></p>
 <p>弹出提升窗口部件对话框</p>
-<p> <img src="/%5Cphotos%5Cimage021.png"></p>
+<p> <img src="/%5Cphotos%5Cimage021.png" alt="QT"></p>
 <p>添加要提升的类的名字,然后选择 添加 </p>
-<p> <img src="/%5Cphotos%5Cimage022.png"></p>
+<p> <img src="/%5Cphotos%5Cimage022.png" alt="QT"></p>
 <p>添加之后,类名会显示到上边的列表框中,然后单击提升按钮,完成操作.</p>
 <p>我们可以看到, 这个窗口对应的类从原来的QWidget变成了SmallWidget</p>
-<p> <img src="/%5Cphotos%5Cimage023.png"></p>
+<p> <img src="/%5Cphotos%5Cimage023.png" alt="QT"></p>
 <p>再次运行程序,这个widget_3中就能显示出我们自定义的窗口了.</p>
-<p> <img src="/%5Cphotos%5Cimage024.png"></p>
+<p> <img src="/%5Cphotos%5Cimage024.png" alt="QT"></p>
 <p><strong>免责声明：</strong>本文根据<a href="https://yun.itheima.com/">传智播客</a>知识整理，仅为个人收藏，知识分享，请勿商用！</p>
 ]]></content>
       <tags>
@@ -1625,7 +1625,7 @@
 
 <p>  在连接信号和槽的时候，槽函数可以使用Lambda表达式的方式进行处理。</p>
 <h2 id="3-3-Lambda表达式"><a href="#3-3-Lambda表达式" class="headerlink" title="3.3 Lambda表达式"></a>3.3 Lambda表达式</h2><p>C++11中的Lambda表达式<strong>用于定义并创建匿名的函数对象</strong>，以简化编程工作。首先看一下Lambda表达式的基本构成：</p>
-<p> <img src="/%5Cphotos%5Cimage010.png"></p>
+<p> <img src="/%5Cphotos%5Cimage010.png" alt="Qt"></p>
 <p>[函数对象参数](操作符重载函数参数)mutable或exception -&gt;返回值{函数体}</p>
 <p>① 函数对象参数；</p>
 <p>[]，标识一个<strong>Lambda的开始</strong>，这部分必须存在，<strong>不能省略</strong>。函数对象参数是传递给编译器自动生成的函数对象类的构造函数的。函数对象参数只能使用那些到定义Lambda为止时Lambda所在作用范围内可见的局部变量（包括Lambda所在类的this）。函数对象参数有以下形式：</p>
@@ -1680,22 +1680,22 @@
 <p>打开Qt Creator 界面选择 New Project或者选择菜单栏 【文件】-【新建文件或项目】菜单项</p>
 <p>​                 <img src="\photos\image001.png"  />              </p>
 <p>弹出New Project对话框，选择Qt Widgets Application， </p>
-<p> <img src="/%5Cphotos%5Cimage002.png"></p>
+<p> <img src="/%5Cphotos%5Cimage002.png" alt="Qt"></p>
 <p>选择【Choose】按钮，弹出如下对话框</p>
-<p> <img src="/%5Cphotos%5Cimage003.png"></p>
+<p> <img src="/%5Cphotos%5Cimage003.png" alt="Qt"></p>
 <p>设置项目名称和路径，按照向导进行下一步，</p>
-<p> <img src="/%5Cphotos%5Cimage004.png"></p>
+<p> <img src="/%5Cphotos%5Cimage004.png" alt="Qt"></p>
 <p>选择编译套件</p>
-<p> <img src="/%5Cphotos%5Cimage005.png"></p>
+<p> <img src="/%5Cphotos%5Cimage005.png" alt="Qt"></p>
 <p>向导会默认添加一个继承自CMainWindow的类，可以在此修改类的名字和基类。继续下一步</p>
-<p> <img src="/%5Cphotos%5Cimage006.png"></p>
+<p> <img src="/%5Cphotos%5Cimage006.png" alt="Qt"></p>
 <p>即可创建出一个Qt桌面程序。</p>
 <h2 id="2-2-手动创建"><a href="#2-2-手动创建" class="headerlink" title="2.2   手动创建"></a>2.2   手动创建</h2><p>添加一个空项目</p>
-<p> <img src="/%5Cphotos%5Cimage007.png"></p>
+<p> <img src="/%5Cphotos%5Cimage007.png" alt="Qt"></p>
 <p>选择【choose】进行下一步。设置项目名称和路径 —&gt; 选择编译套件 –&gt; 修改类信息 –&gt; 完成（步骤同上），生成一个空项目。在空项目中添加文件：在项目名称上单击鼠标右键弹出右键菜单，选择【添加新文件】</p>
-<p> <img src="/%5Cphotos%5Cimage008.png"></p>
+<p> <img src="/%5Cphotos%5Cimage008.png" alt="Qt"></p>
 <p>弹出新建文件对话框</p>
-<p> <img src="/%5Cphotos%5Cimage009.png"></p>
+<p> <img src="/%5Cphotos%5Cimage009.png" alt="Qt"></p>
 <p>在此对话框中选择要添加的类或者文件，根据向导完成文件的添加。</p>
 <h2 id="2-3-pro文件"><a href="#2-3-pro文件" class="headerlink" title="2.3   .pro文件"></a>2.3   .pro文件</h2><p>在使用Qt向导生成的应用程序.pro文件格式如下：</p>
 <pre><code><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">QT    += core gui  <span class="comment">//模块的名字</span></span><br><span class="line"></span><br><span class="line">​    <span class="built_in">greaterThan</span>(QT_MAJOR_VERSION, <span class="number">4</span>): QT += widgets</span><br><span class="line"></span><br><span class="line">​    TARGET = test <span class="comment">//应用程序</span></span><br><span class="line"></span><br><span class="line">​    TEMPLATE = app <span class="comment">//生成的makefile的模板类型</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//源文件</span></span><br><span class="line"></span><br><span class="line"> SOURCES += main.cpp\</span><br><span class="line"></span><br><span class="line"> mainwindow.cpp</span><br><span class="line"></span><br><span class="line"><span class="comment">//头文件</span></span><br><span class="line"></span><br><span class="line"> HEADERS += mainwindow.h</span><br><span class="line"></span><br><span class="line"> <span class="comment">//窗口设计文件</span></span><br><span class="line"></span><br><span class="line">FORMS  += mainwindow.ui</span><br></pre></td></tr></table></figure>
